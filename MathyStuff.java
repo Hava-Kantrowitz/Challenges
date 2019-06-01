@@ -5,11 +5,11 @@ public class MathyStuff {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		//int limit = sc.nextInt();
-		//calculateFibonacci(limit);//calculates fibonacci to the nth number
+		int limit = sc.nextInt();
+		calculateFibonacci(limit);//calculates fibonacci to the nth number
 		
-		//int limitPi = sc.nextInt();
-		//determinePiDigit(limitPi);//calculates pi to the nth digit, limit is 100
+		int limitPi = sc.nextInt();
+		determinePiDigit(limitPi);//calculates pi to the nth digit, limit is 100
 		
 		int limitCalc = sc.nextInt();
 		double pi = calculatePiNilakantha(limitCalc);//still need to get this working maybe!!
@@ -97,6 +97,7 @@ public class MathyStuff {
 			denom = denom + 2;
 			multiplier = 1/denom;
 		}
+		
 		
 		return pi;
 	}
