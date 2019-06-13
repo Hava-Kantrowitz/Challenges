@@ -10,27 +10,52 @@ public class SplitList {
 
 	public static void main(String[] args) {
 		
-		ArrayList<Integer> original = new ArrayList<>();
-		original.add(1);
-		original.add(2);
-		original.add(3);
-		original.add(4);
-		original.add(5);
-		original.add(6);
-		original.add(7);
-		original.add(8);
-		original.add(9);
-		original.add(10);
+		ArrayList<Integer> originalHard = new ArrayList<>();
+		ArrayList<Integer> originalInput = new ArrayList<>();
+		originalHard.add(1);
+		originalHard.add(2);
+		originalHard.add(3);
+		originalHard.add(4);
+		originalHard.add(5);
+		originalHard.add(6);
+		originalHard.add(7);
+		originalHard.add(8);
+		originalHard.add(9);
+		originalHard.add(10);
 		ArrayList<Integer> first = new ArrayList<>();
 		ArrayList<Integer> second = new ArrayList<>();
 		
-		for (Integer item : original) {
-			int index = original.indexOf(item);
+		Scanner sc = new Scanner(System.in);
+		String input = sc.nextLine();
+		
+		for (int i = 0; i < input.length(); i++) {
+			char myChar = input.charAt(i);
+			int myInt = Character.getNumericValue(myChar);
+			originalInput.add(myInt);
+		}
+		
+		
+		if(originalInput.size() == 0) {
+		for (Integer item : originalHard) {
+			int index = originalHard.indexOf(item);
 			if(index % 2 == 0) {
 				first.add(item);
 			}
 			else {
 				second.add(item);
+			}
+		}
+		}
+		
+		else {
+			for (Integer item : originalInput) {
+				int index = originalInput.indexOf(item);
+				if(index % 2 == 0) {
+					first.add(item);
+				}
+				else {
+					second.add(item);
+				}
 			}
 		}
 		
